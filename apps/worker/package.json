@@ -8,18 +8,18 @@
     "start": "node dist/main.js"
   },
   "dependencies": {
-    "@prisma/client": "^5.22.0",
+    "@prisma/client": "^7.10.0",
     "@smm/config": "workspace:*",
     "@smm/contracts": "workspace:*",
-    "bullmq": "^5.41.3",
+    "bullmq": "^6.3.13",
     "decimal.js": "^10.5.0",
-    "dotenv": "^16.4.7",
-    "ioredis": "^5.5.0",
-    "pino": "^9.6.0"
+    "dotenv": "^18.0.7",
+    "ioredis": "^6.0.0",
+    "pino": "^10.4.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.4",
+    "@types/node": "^26.6.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^7.0.2"
   }
 }
