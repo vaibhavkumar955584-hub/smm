@@ -260,10 +260,10 @@ function TravelingCrownRig({
         <CrownModel scale={1.05} />
       </group>
 
-      {/* Orbiting Platform Logos Reacting to Scroll Velocity (Tight radius to avoid screen overflow) */}
-      <group position={[0, -0.12, 0]} scale={0.44}>
+      {/* Orbiting Platform Logos Reacting to Scroll Velocity (Clear orbit outside crown, zero collision) */}
+      <group position={[0, -0.08, 0]} scale={0.42}>
         <PlatformRing
-          radius={isMobile ? 2.5 : 2.8}
+          radius={isMobile ? 3.9 : 4.3}
           isMobile={isMobile || internalLowPerf}
           scrollProgress={scrollDummy}
         />
