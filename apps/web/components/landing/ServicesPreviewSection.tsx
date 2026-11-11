@@ -61,9 +61,11 @@ export function ServicesPreviewSection() {
 
   return (
     <section
-      id="pricing"
-      className="w-full py-16 sm:py-24 lg:py-28 bg-transparent relative"
+      id="services"
+      className="w-full py-16 sm:py-24 lg:py-28 bg-transparent relative scroll-mt-20"
     >
+      {/* Anchor for Pricing navigation */}
+      <div id="pricing" className="scroll-mt-20 absolute -top-10" />
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">

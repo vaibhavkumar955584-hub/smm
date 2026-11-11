@@ -186,9 +186,9 @@ function TravelingCrownRig({
     const worldX = ndcX * (worldWidthAtZ0 * 0.5);
     const worldY = ndcY * (worldHeightAtZ0 * 0.5);
 
-    // Crown base model has ~2.4 unit diameter
+    // Crown base model has ~2.4 unit diameter (0.78 scale factor provides 22% safety gutter)
     const worldTargetSize = (targetSize / vHeight) * worldHeightAtZ0;
-    const targetScale = Math.max(0.2, (worldTargetSize / 2.4) * 0.96);
+    const targetScale = Math.max(0.2, (worldTargetSize / 2.4) * 0.78);
 
     // Gentle idle float on mobile & desktop
     idleRot.current += 0.025;
@@ -260,10 +260,10 @@ function TravelingCrownRig({
         <CrownModel scale={1.05} />
       </group>
 
-      {/* Orbiting Platform Logos Reacting to Scroll Velocity */}
-      <group position={[0, -0.15, 0]} scale={0.48}>
+      {/* Orbiting Platform Logos Reacting to Scroll Velocity (Tight radius to avoid screen overflow) */}
+      <group position={[0, -0.12, 0]} scale={0.44}>
         <PlatformRing
-          radius={isMobile ? 4.4 : 4.8}
+          radius={isMobile ? 2.5 : 2.8}
           isMobile={isMobile || internalLowPerf}
           scrollProgress={scrollDummy}
         />
